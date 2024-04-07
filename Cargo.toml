@@ -1,16 +1,24 @@
-[package]
-name = "oskar_gain"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-hdf5 = {version = "0.8.1"}
-hdf5-sys={version='0.8.1',features=['static']}
-ndarray='0.15.4'
-lds={path='../lds'}
-serde={version='1.0.137', features=['derive']}
-serde_yaml='0.8.24'
-num='0.4.0'
-clap='3.2.5'
+clap = '4.5.4'
+ndarray = '0.15.6'
+num = '0.4.1'
+serde_yaml = '0.9.34+deprecated'
+
+[dependencies.hdf5]
+version = '0.8.1'
+
+[dependencies.hdf5-sys]
+features = ['static']
+version = '0.8.1'
+
+[dependencies.lds]
+path = '../lds'
+
+[dependencies.serde]
+features = ['derive']
+version = '1.0.197'
+
+[package]
+edition = '2021'
+name = 'oskar_gain'
+version = '0.1.0'
